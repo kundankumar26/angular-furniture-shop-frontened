@@ -78,7 +78,7 @@
           <h5><a href="single.html">LG Monitor</a></h5>
           <div class="simpleCart_shelfItem">
 
-            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <!-- <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br> -->
             <button type="submit" [disabled]="buttonLGDisabled" class="w3ls-cart"  (click)="addLGMonitor()">Add to
               cart</button>
               
@@ -97,7 +97,7 @@
           </div>
           <h5><a href="single.html">HP Monitor</a></h5>
           <div class="simpleCart_shelfItem">
-            <input [disabled]="true" type="number" class="form-control" id="usr"  name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <!-- <input [disabled]="true" type="number" class="form-control" id="usr"  name="quantity" placeholder="1" maxlength="4" size="4"><br><br> -->
             <button type="submit" [disabled]="buttonHPDisabled" class="w3ls-cart"  (click)="addHPMonitor()">Add to
               cart</button>
           </div>
@@ -115,7 +115,7 @@
           </div>
           <h5><a href="single.html">KeyBoard</a></h5>
           <div class="simpleCart_shelfItem">
-            <input [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <!-- <input [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br> -->
             <button type="submit" [disabled]="buttonKeyboardDisabled" class="w3ls-cart" (click)="addKeybord()">Add to
               cart</button>
           </div>
@@ -133,7 +133,7 @@
           <h5><a href="single.html">Mouse</a></h5>
           <div class="simpleCart_shelfItem">
             <!-- <label for="usr">Quantity:</label> -->
-            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <!-- <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br> -->
             <button type="submit" [disabled]="buttonMouseDisabled" class="w3ls-cart" (click)="addMouser()">Add to
               cart</button>
           </div>
@@ -152,7 +152,7 @@
           <h5><a href="single.html">Table 1</a></h5>
           <div class="simpleCart_shelfItem">
             <!-- <label for="usr">Quantity:</label> -->
-            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <!-- <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br> -->
             <button type="submit" [disabled]="buttonTable1Disabled" class="w3ls-cart" (click)="addtable1()">Add to
               cart</button>
           </div>
@@ -171,7 +171,7 @@
           <h5><a href="single.html">Table 2</a></h5>
           <div class="simpleCart_shelfItem">
             <!-- <label for="usr">Quantity:</label> -->
-            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <!-- <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br> -->
             <button type="submit" [disabled]="buttonTable2Disabled" class="w3ls-cart" (click)="addtable2()">Add to
               cart</button>
           </div>
@@ -190,7 +190,7 @@
           <h5><a href="single.html">Chair</a></h5>
           <div class="simpleCart_shelfItem">
             <!-- <label for="usr">Quantity:</label> -->
-            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <!-- <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br> -->
             <button type="submit" [disabled]="buttonChairDisabled" class="w3ls-cart" (click)="addchair()">Add to
               cart</button>
           </div>
@@ -199,10 +199,15 @@
 
       <div class="clearfix"> </div>
     </div>
-
+    
+    <tr *ngFor="let emporder of items">
+      <td>{{emporder}}</td>
+    </tr>
 
     <button type="button" class="btn btn-secondary" style="margin: 50px;" (click)="confirmOrder()">Confirm
-      Orderss {{arr}} </button>
+      Orders </button>
+
+      
   </div>
 </div>
 <!-- //new-products -->

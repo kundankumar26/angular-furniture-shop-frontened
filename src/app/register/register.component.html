@@ -9,7 +9,7 @@
       <div class="form-group row">
         <label for="employeeId" class="col-sm-4 col-form-label text-md-right">Employee ID</label>
         <div class="col-md-8">
-            <input type="number" [formControlName]="'empId'" id="employeeId" 
+            <input type="number" name ="empId" [formControlName]="'empId'" id="employeeId" 
                     class="form-control" name="email-address" required autofocus>
             <span *ngIf="!signupForm.get('empId').valid && signupForm.get('empId').touched"> Please provide a valid employee Id </span>                                    
         </div>

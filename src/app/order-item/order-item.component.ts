@@ -16,7 +16,7 @@ export class OrderItemComponent implements OnInit {
   index: number = 0;
   employeeShippingAddress: string;
   employeePhoneNumber: number;
-  arr:any;
+  items:string []=["a","b","c","d"];
   
   buttonLGDisabled = false;
   buttonHPDisabled: boolean = false;
@@ -42,21 +42,22 @@ export class OrderItemComponent implements OnInit {
       this.buttonLGDisabled = true;
       const order1 = new NewOrder();
       order1.itemRequested = "LG Monitor";
-      this.arr.append("Hello");
+      this.items.push("LG Monitor");
       order1.qty = 1;
       this.order.push(order1);
       this.quantity += order1.qty;
-      console.log("LG"+order1.qty);
+      console.log("LG - "+ this.items);
       
   }
   addHPMonitor(){
     this.buttonHPDisabled = true;
     const order1 = new NewOrder();
     order1.itemRequested = "HP monitor";
-    this.arr.append("Hi");
+    this.items.push("HP monitor");
     order1.qty = 1;
     this.order.push(order1);
     this.quantity += order1.qty;
+    console.log("LG - "+this.items);
     }
 
     //this.order[this.index++].itemRequested = 'LG Monitor HP';
@@ -70,46 +71,54 @@ export class OrderItemComponent implements OnInit {
     this.buttonMouseDisabled = true;
     const order1 = new NewOrder();
     order1.itemRequested = "Mouse";
+    //this.items.concat(order1.itemRequested);
     order1.qty = 1;
     this.order.push(order1);
     this.quantity += order1.qty;
-    
+    console.log("LG - "+this.items);
   }
   addKeybord(){
     this.buttonKeyboardDisabled = true;
     const order1 = new NewOrder();
     order1.itemRequested = "Keybord";
+    //this.items.concat(order1.itemRequested);
     order1.qty = 1;
     this.order.push(order1);
     this.quantity += order1.qty;
-
+    console.log("LG - "+this.items);
   }
 
   addchair(){
     this.buttonChairDisabled = true;
     const order1 = new NewOrder();
     order1.itemRequested = "Chair";
+    //this.items.concat(order1.itemRequested);
     order1.qty = 1;
     this.order.push(order1);
     this.quantity += order1.qty;
+    console.log("LG - "+this.items);
   }
 
   addtable1(){
     this.buttonTable1Disabled = true;
     const order1 = new NewOrder();
     order1.itemRequested = "table 1";
+    //this.items.concat(order1.itemRequested);
     order1.qty = 1;
     this.order.push(order1);
     this.quantity += order1.qty;
+    console.log("LG - "+this.items);
   }
 
   addtable2(){
     this.buttonTable2Disabled = true;
     const order1 = new NewOrder();
     order1.itemRequested = "table 2";
+    //this.items.concat(order1.itemRequested);
     order1.qty = 1;
     this.order.push(order1);
     this.quantity += order1.qty;
+    console.log("LG - "+this.items);
   }
 //----------------------------------------
 saveOrder(){
