@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!--Menu-->
+  <div class="container">
+    <!-- <div class="btn-group" style="margin-left: 899px;">
+      <button type="button" class="btn btn-link" (click)="BackTOrder()">Back</button>
+      <button type="button" class="btn btn-link" (click)="Logout()">Logout</button>
+    </div> -->
+  </div>
+  <!--/Menu-->
+
+  <div class="container">
+    <table class="table table-hover">
+       <thead>
+           <tr>
+               <th>Items requested</th>
+               <th>Quanity</th>
+               <th>Shipping Address</th>
+               <th>Phone Number</th>
+               <th>Order Date</th>
+               <th>Shipped Date</th>
+               
+           </tr>
+       </thead>
+       <tbody>
+         
+           <tr *ngFor="let emporder of order">
+               <td>{{emporder.itemRequested}}</td>
+               <td>{{emporder.qty}}</td>
+               <td>{{emporder.shippingAddress}}</td>
+               <td>{{emporder.phnNo}}</td>
+               <td>{{emporder.orderDate}}</td>
+               <td>{{emporder.shippedDate}}</td>
+               <td>
+                 <button type="button" class="btn btn btn-danger" (click) = "deleteOrder(emporder.orderId)" style="margin-left: 15px;">Cancel Order</button>
+                 <div class="alert alert-success" id="onsubmit" style="display:none">
+                  <strong>Success!</strong> Order has been cancelled.
+                </div>
+                 
+               </td>
+           </tr>
+
+       </tbody>
+   </table>
+</div>
+</body>
+
+</html>

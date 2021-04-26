@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Order</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<!-- </html> -->
+
+
+<!-- <!doctype html>
+<html lang="en"> -->
+
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>Order Items</title>
+  <!-- for-mobile-apps -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Electronic Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!-- //for-mobile-apps -->
+  <!-- Custom Theme files -->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/assets/css/fasthover.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/assets/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- //Custom Theme files -->
+  <!-- font-awesome icons -->
+  <link href="/assets/css/font-awesome.css" rel="stylesheet">
+  <!-- //font-awesome icons -->
+  <!-- js -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/jquery.countdown.css" /> <!-- countdown -->
+  <!-- //js -->
+  <!-- web fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+    rel='stylesheet' type='text/css'>
+  <!-- //web fonts -->
+  <!-- start-smooth-scrolling -->
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+      });
+    });
+  </script>
+</head>
+
+
+
+<!-- products -->
+<div class="new-products">
+  <div class="container">
+    <h3>Products</h3>
+    <div class="agileinfo_new_products_grids">
+      <div class="col-md-3 agileinfo_new_products_grid">
+        <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+          <div class="hs-wrapper hs-wrapper1">
+            <img src="assets/images/25.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/23.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/24.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/22.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/26.jpg" alt=" " class="img-responsive" />
+          </div>
+          <h5><a href="single.html">LG Monitor</a></h5>
+          <div class="simpleCart_shelfItem">
+
+            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <button type="submit" [disabled]="buttonLGDisabled" class="w3ls-cart"  (click)="addLGMonitor()">Add to
+              cart</button>
+              
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 agileinfo_new_products_grid">
+        <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+          <div class="hs-wrapper hs-wrapper1">
+            <img src="assets/images/42.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/43.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/44.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/45.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/46.jpg" alt=" " class="img-responsive" />
+          </div>
+          <h5><a href="single.html">HP Monitor</a></h5>
+          <div class="simpleCart_shelfItem">
+            <input [disabled]="true" type="number" class="form-control" id="usr"  name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <button type="submit" [disabled]="buttonHPDisabled" class="w3ls-cart"  (click)="addHPMonitor()">Add to
+              cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 agileinfo_new_products_grid">
+        <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+          <div class="hs-wrapper hs-wrapper1">
+            <img src="assets/images/27.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/28.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/29.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/28.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/29.jpg" alt=" " class="img-responsive" />
+          </div>
+          <h5><a href="single.html">KeyBoard</a></h5>
+          <div class="simpleCart_shelfItem">
+            <input [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <button type="submit" [disabled]="buttonKeyboardDisabled" class="w3ls-cart" (click)="addKeybord()">Add to
+              cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 agileinfo_new_products_grid">
+        <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+          <div class="hs-wrapper hs-wrapper1">
+            <img src="assets/images/34.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/33.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/32.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/35.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/34.jpg" alt=" " class="img-responsive" />
+          </div>
+          <h5><a href="single.html">Mouse</a></h5>
+          <div class="simpleCart_shelfItem">
+            <!-- <label for="usr">Quantity:</label> -->
+            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <button type="submit" [disabled]="buttonMouseDisabled" class="w3ls-cart" (click)="addMouser()">Add to
+              cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 agileinfo_new_products_grid">
+        <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+          <div class="hs-wrapper hs-wrapper1">
+            <img src="assets/images/47.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/47.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/47.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/47.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/47.jpg" alt=" " class="img-responsive" />
+          </div>
+          <h5><a href="single.html">Table 1</a></h5>
+          <div class="simpleCart_shelfItem">
+            <!-- <label for="usr">Quantity:</label> -->
+            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <button type="submit" [disabled]="buttonTable1Disabled" class="w3ls-cart" (click)="addtable1()">Add to
+              cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 agileinfo_new_products_grid">
+        <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+          <div class="hs-wrapper hs-wrapper1">
+            <img src="assets/images/48.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/48.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/48.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/48.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/48.jpg" alt=" " class="img-responsive" />
+          </div>
+          <h5><a href="single.html">Table 2</a></h5>
+          <div class="simpleCart_shelfItem">
+            <!-- <label for="usr">Quantity:</label> -->
+            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <button type="submit" [disabled]="buttonTable2Disabled" class="w3ls-cart" (click)="addtable2()">Add to
+              cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 agileinfo_new_products_grid">
+        <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+          <div class="hs-wrapper hs-wrapper1">
+            <img src="assets/images/37.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/38.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/39.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/40.jpg" alt=" " class="img-responsive" />
+            <img src="assets/images/39.jpg" alt=" " class="img-responsive" />
+          </div>
+          <h5><a href="single.html">Chair</a></h5>
+          <div class="simpleCart_shelfItem">
+            <!-- <label for="usr">Quantity:</label> -->
+            <input type="number" [disabled]="true" class="form-control"  id="usr" name="quantity" placeholder="1" maxlength="4" size="4"><br><br>
+            <button type="submit" [disabled]="buttonChairDisabled" class="w3ls-cart" (click)="addchair()">Add to
+              cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"> </div>
+    </div>
+
+
+    <button type="button" class="btn btn-secondary" style="margin: 50px;" (click)="confirmOrder()">Confirm
+      Order</button>
+  </div>
+</div>
+<!-- //new-products -->
+<div>
+</div>
+
+<!--button-->
+<div class="container" id="TestsDiv" style="display: none">
+  <h2>Details</h2>
+
+  <form action="/action_page.php" class="was-validated">
+
+    <div class="form-group">
+
+      <label for="address">Address</label>
+      <input type="text" [(ngModel)]="employeeShippingAddress" class="form-control" id="shippingAddress"  placeholder="shippingAddress"
+        name="address" required>
+      <div class="invalid-feedback">Please fill out this field.</div>
+
+    </div>
+    <div class="form-group">
+      <label for="phno">Contact details</label>
+      <input type="number" [(ngModel)]="employeePhoneNumber" class="form-control" id="phnNo"  placeholder="Phone Number" name="phnNo"
+        required>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="addToCart()">Submit</button>
+
+    <div class="alert alert-success" id="onsubmit" style="display:none">
+      <strong>Success!</strong> Order placed sucessfully.
+    </div>
+
+  </form>
+</div>
+<!--button-->
+
+</html>
