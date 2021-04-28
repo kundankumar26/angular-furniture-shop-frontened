@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { SharedService } from './_services/shared.service';
 import { TokenStorageService } from './_services/token-storage.service';
 
 @Component({
@@ -8,14 +10,22 @@ import { TokenStorageService } from './_services/token-storage.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  
   private roles: string[];
   isLoggedIn = false;
   showAdminBoard = false;
   showVendorBoard = false;
   showEmployeeBoard = false;
   username: string;
+  clickEventsubscription: Subscription;
 
-  constructor(private tokenStorageService: TokenStorageService, private route: Router) { }
+  constructor(private tokenStorageService: TokenStorageService, private route: Router,private sharedService: SharedService) {
+
+    this.clickEventsubscription = this.sharedService.getClickEvent().subscribe(()=>{
+      window.location.reload();
+      console.log("inside header");
+    });
+   }
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();

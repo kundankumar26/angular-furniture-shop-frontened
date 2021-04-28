@@ -15,6 +15,8 @@ import { AdminComponent } from './admin/admin.component';
 import { VentorComponent } from './ventor/ventor.component';
 import { OrderItemComponent } from './order-item/order-item.component';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgbModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

@@ -32,8 +32,9 @@ export class AuthService {
       password: user.password
     }, httpOptions);
   }
-  signup(payload: SignupRequestPayload): Observable<any> {
-    return this.httpClient.post(AUTH_API + "signup/", payload, { responseType: 'json' });
+  signup(payload: any): any {
+    return "hey there"
+    //return this.httpClient.post(AUTH_API + "signup/", payload, { responseType: 'json' });
   }
 
   // getOrdersForEmployee(): Observable<any>{
@@ -45,6 +46,10 @@ export class AuthService {
   //   };
   //   return this.httpClient.get(AUTH_API + '/employee/', httpOptions);
   // }
+
+  signinn(payload: any): Observable<any> {
+    return this.httpClient.post(AUTH_API + 'signin/', payload);
+  }
 
   getOrdersForAdmin(): Observable<any> {
     const httpOptions = {

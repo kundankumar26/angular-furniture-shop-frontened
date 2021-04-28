@@ -11,6 +11,7 @@ import { SignupRequestPayload } from './register-request.payload';
 })
 export class RegisterComponent implements OnInit {
 
+  form:any={}
   signupRequestPayload: SignupRequestPayload;
   signupForm!: FormGroup;
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from '../employee';
 import { AuthService } from '../_services/auth.service';
+import { SharedService } from '../_services/shared.service';
 import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
@@ -12,49 +13,48 @@ import { TokenStorageService } from '../_services/token-storage.service';
 export class LoginComponent implements OnInit {
 
   form: any = {};
+
+  user: Employee = new Employee();
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
-  roles: string[] = [];
-  
-  //role_a:any;
+  roles: String[];
 
-  constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private route: Router) { }
+  constructor(private authService: AuthService, private router: Router, 
+    private tokenStorage: TokenStorageService, private sharedServices: SharedService) { }
 
-  ngOnInit(): void {
-    if (this.tokenStorage.getToken()) {
-      this.isLoggedIn = true;
-      this.roles = this.tokenStorage.getUser().roles;
-    }
+
+   ngOnInit(): void {
+     if (this.tokenStorage.getToken()) {
+       this.isLoggedIn = true;
+       this.roles = this.tokenStorage.getUser().roles;
+     }
   }
 
-  onSubmit(): void {
+   onSubmit(): void {
     this.authService.login(this.form).subscribe(
-      data => {
-        this.tokenStorage.saveToken(data.accessToken);
-        this.tokenStorage.saveUser(data);
+       data => {
+         this.tokenStorage.saveToken(data.accessToken);
+         this.tokenStorage.saveUser(data);
 
-        this.isLoginFailed = false;
-        this.isLoggedIn = true;
-        this.roles = this.tokenStorage.getUser().roles;
-        this.reloadPage();
-      },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isLoginFailed = true;
-      }
-    );
-    
-  }
+         this.isLoginFailed = false;
+         this.isLoggedIn = true;
+         this.roles = this.tokenStorage.getUser().roles;
+         this.reloadPage();
+       },
+       err => {
+         this.errorMessage = err.error.message;
+         this.isLoginFailed = true;
+       }
+     );
+   }
+
   reloadPage(): void {
-    //window.location.reload();
     if(String(this.roles) == "ROLE_EMPLOYEE") 
-      this.route.navigate(["/employee"]);
+      this.router.navigate(["/employee"]);
     else if (String(this.roles) == "ROLE_ADMIN") 
-      this.route.navigate(["/admin"]);
+      this.router.navigate(["/admin"]);
     else if(String(this.roles) == "ROLE_VENDOR") 
-      this.route.navigate(["/ventor"]);
-    //window.location.reload();
+      this.router.navigate(["/ventor"]);
   }
-
 }
